@@ -1,0 +1,22 @@
+CoordMode, Mouse, Screen
+MouseClick, left, 1490, 599
+MouseClick, right, 1490, 599
+Sleep,1000
+send, s
+;~ MouseClick, left, 1490, 599
+;~ WinActivate, 다른 이름으로 저장
+;~ ControlSend,Edit1,{testesetsetsts}, 다른 이름으로 저장
+
+Clipboard = ccc
+
+ifWinExist, ahk_class #32770
+{
+   Send, ^v
+   Send, {Enter}
+   ;~ Send, {Esc}
+}
+else
+{
+    MsgBox, is not there
+}
+return
